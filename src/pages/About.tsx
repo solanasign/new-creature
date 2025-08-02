@@ -1,7 +1,6 @@
 import React from 'react';
 import { aboutChurch, aboutChurch2 } from '../assets/images'
 import { ObjectivesAccordion } from '../components/ObjectivesAccordion';
-import { Link } from 'react-router-dom';
 import TakeNextStepSection from '../components/TakeNextStepSection';
 import Footer from '../components/Footer';
 const About = () => {
