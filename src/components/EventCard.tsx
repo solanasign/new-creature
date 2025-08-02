@@ -1,4 +1,6 @@
 import React from 'react';
+import OptimizedImage from './OptimizedImage';
+import { RESPONSIVE_SIZES } from '../config/imageConfig';
 
 export interface EventCardData {
   date: string;
@@ -19,7 +21,12 @@ function formatDay(dateStr: string) {
 export const EventCard: React.FC<EventCardData> = ({ date, title, location, image }) => (
   <div className="bg-white rounded-2xl shadow-lg overflow-hidden w-full max-w-xs sm:max-w-sm flex flex-col items-center hover:shadow-2xl hover:scale-[1.03] transition-all duration-300 mx-auto">
     <div className="w-full aspect-[4/3] bg-gray-100 flex items-center justify-center overflow-hidden">
-      <img src={image} alt={title} className="w-full h-full object-cover rounded-t-2xl transition-all duration-300" />
+      <OptimizedImage
+        src={image}
+        alt={title}
+        className="w-full h-full object-cover rounded-t-2xl transition-all duration-300"
+        sizes={RESPONSIVE_SIZES.thumbnail}
+      />
     </div>
     <div className="flex flex-col sm:flex-row items-center sm:items-start gap-2 sm:gap-4 px-4 sm:px-6 py-4 w-full">
       <div className="flex flex-row sm:flex-col items-center sm:items-center min-w-[40px] mb-2 sm:mb-0">

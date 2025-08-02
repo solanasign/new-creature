@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import { useEffect } from 'react';
 import { AuthProvider } from './features/auth/context/AuthContext';
 import { ProtectedRoute } from './features/auth/components/ProtectedRoute';
 import Home from './pages/Home';
@@ -14,8 +15,24 @@ import Sermons from './pages/Sermons'
 import InHimSermon from './pages/InHimSermon'
 import Events from './pages/Events'
 import Contact from './pages/Contact'
+import { preloadCriticalImages } from './utils/imagePreloader';
+import { monitorWebVitals } from './utils/performanceMonitor';
 
 function App() {
+  useEffect(() => {
+    // Initialize image preloading
+    preloadCriticalImages();
+    
+    // Initialize performance monitoring
+    monitorWebVitals();
+    
+    // Log performance report after 5 seconds
+    setTimeout(() => {
+      const { PerformanceMonitor } = require('./utils/performanceMonitor');
+      PerformanceMonitor.logPerformanceReport();
+    }, 5000);
+  }, []);
+
   return (
     <AuthProvider>
       <AnimatedLogo />
