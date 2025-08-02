@@ -1,5 +1,5 @@
 import React from 'react';
-import { FundData } from '../types/FundData';
+import { FundData } from '../src/types/FundData';
 import FundDataCard from './FundDataCard';
 
 interface FundDataGridProps {

@@ -1,6 +1,6 @@
 import React from 'react';
-import employerServices from '../assets/data/employerServices';
-import { Service, GetStartedStep } from '../types/serviceTypes';
+import employerServices from '../src/assets/data/employerServices';
+import { Service, GetStartedStep } from '../src/types/serviceTypes';
 
 const EmployerServices: React.FC = () => {
   return (

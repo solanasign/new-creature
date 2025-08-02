@@ -25,7 +25,7 @@ const TakeNextStepSection: React.FC = () => (
           </p>
           <div className="pt-2 md:pt-4">
             <Link 
-              to="/next-steps" 
+              to="/contact" 
               className="inline-block bg-white hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-lg shadow-lg text-lg transition-all duration-200 hover:scale-105"
             >
               Learn More

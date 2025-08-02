@@ -1,10 +1,4 @@
-import eyeIcon from "./eye.png";
-import eyeOffIcon from "./eye_off.png";
-import googleIcon from './google-icon.png';
-import facebookIcon from './facebook-icon.png';
-import appleIcon from './apple-icon.png';
 import stairs from './stairs.jpg'
-import about from './about.png'
 import logo from './logo.png'
 import videoSrc from './video.mp4'
 import wealth from './wealth.png'
@@ -38,4 +32,4 @@ import open from './open.jpg'
 import praise from './praise.jpg'
 import contact from './contact.jpg'
 
-export { eyeIcon, eyeOffIcon, googleIcon, facebookIcon, appleIcon, stairs, about, logo, videoSrc, wealth, logowide, home, aboutChurch, aboutChurch2, outburst, worship, worship2, outreach, gideon, pastor, pastor2, pastor1, d4, mama, mama2, sax, victor, p2, women, word, inHim, inHimm, videoSrc1, joie, events, guitar, open, praise, contact };
+export { stairs,  logo, videoSrc, wealth, logowide, home, aboutChurch, aboutChurch2, outburst, worship, worship2, outreach, gideon, pastor, pastor2, pastor1, d4, mama, mama2, sax, victor, p2, women, word, inHim, inHimm, videoSrc1, joie, events, guitar, open, praise, contact };

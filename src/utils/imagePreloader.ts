@@ -42,6 +42,8 @@ export const CRITICAL_IMAGES = [
   '/src/assets/logo.png',
   '/src/assets/logowhite.png',
   '/src/assets/home-image.jpg',
+  '/src/assets/word.jpg',
+  '/src/assets/pastor1.jpg',
 ];
 
 // Preload critical images on app startup

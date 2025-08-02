@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { people } from '../assets/images';
+import { people } from '../src/assets/images';
 
 interface Quote {
   text: string;

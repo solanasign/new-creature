@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { HomeIcon, BellIcon, ChatBubbleLeftIcon, BookmarkIcon, UserGroupIcon, CreditCardIcon, UserCircleIcon, EllipsisHorizontalCircleIcon, PlusIcon } from '@heroicons/react/24/outline';
-import { logo } from '../assets/images';
-import MoreOptionsModal from './MoreOptionsModal';
+import { logo } from '../src/assets/images';
+import MoreOptionsModal from '../src/components/MoreOptionsModal';
 
 interface LeftSidebarProps {
   onNewPostClick: () => void;

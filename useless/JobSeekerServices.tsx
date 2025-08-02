@@ -1,6 +1,6 @@
 import React from 'react';
-import jobSeekerServices from '../assets/data/jobSeekerServices';
-import { JobSeekerService } from '../types/jobSeekerTypes';
+import jobSeekerServices from '../src/assets/data/jobSeekerServices';
+import { JobSeekerService } from '../src/types/jobSeekerTypes';
 
 const JobSeekerServices = () => {
   return (

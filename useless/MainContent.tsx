@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { PostCreator } from '../features/content/components/PostCreator';
+import { PostCreator } from '../src/features/content/components/PostCreator';
 import Post from './Post';
 
 interface PostData {

@@ -1,5 +1,5 @@
 import React from "react";
-import { appleIcon, facebookIcon, googleIcon } from "../assets/images";
+import { appleIcon, facebookIcon, googleIcon } from "../src/assets/images";
 
 const providers = [
   { icon: googleIcon, label: "Google" },

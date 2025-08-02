@@ -3,9 +3,6 @@ import { useEffect } from 'react';
 import { AuthProvider } from './features/auth/context/AuthContext';
 import { ProtectedRoute } from './features/auth/components/ProtectedRoute';
 import Home from './pages/Home';
-import Login from './features/auth/components/Login';
-import Register from './features/auth/components/Register';
-import ProfileVerification from './features/auth/components/ProfileVerification';
 import VideoPlayer from './components/VideoPlayer';
 import NotFound from './pages/NotFound';
 import AnimatedLogo from './components/AnimatedLogo';
@@ -38,9 +35,6 @@ function App() {
       <AnimatedLogo />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/verify" element={<ProfileVerification />} />
         <Route path="/about" element={<About />} />
         <Route path="/new-here" element={<NewHere />} />
         <Route path="/sermons" element={<Sermons />} />
