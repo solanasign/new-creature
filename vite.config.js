@@ -4,6 +4,9 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+  resolve: {
+    extensions: ['.mjs', '.cjs', '.js', '.mts', '.ts', '.jsx', '.tsx', '.json']
+  },
   build: {
     rollupOptions: {
       output: {
@@ -18,11 +21,19 @@ export default defineConfig({
     chunkSizeWarningLimit: 1000,
   },
   optimizeDeps: {
-    include: ['react', 'react-dom', 'framer-motion', 'react-router-dom'],
+    include: ['react', 'react-dom', 'framer-motion', 'react-router-dom', 'jwt-decode'],
+    exclude: ['@types/jsonwebtoken'],
+    force: false,
+    esbuildOptions: {
+      target: 'es2020'
+    }
   },
   server: {
     headers: {
       'Cache-Control': 'public, max-age=31536000, immutable',
     },
+    hmr: {
+      overlay: false
+    }
   },
 })

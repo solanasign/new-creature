@@ -5,11 +5,12 @@ const JWT_SECRET = import.meta.env.VITE_JWT_SECRET || '1adc19bd35ecb9b5ebaac1a2b
 export interface DecodedToken {
   userId: string;
   email: string;
-  role: 'user' | 'creator';
+  role: 'member' | 'admin' | 'pastor';
+  firstName: string;
+  lastName: string;
   exp: number;
   iat: number;
 }
-
 
 export const decodeToken = (token: string): DecodedToken => {
   try {
@@ -35,13 +36,32 @@ export const verifyToken = (token: string): DecodedToken => {
 };
 
 export const getStoredToken = (): string | null => {
-  return localStorage.getItem('token');
+  return localStorage.getItem('accessToken');
 };
 
 export const setStoredToken = (token: string): void => {
-  localStorage.setItem('token', token);
+  localStorage.setItem('accessToken', token);
 };
 
 export const removeStoredToken = (): void => {
-  localStorage.removeItem('token');
+  localStorage.removeItem('accessToken');
+  localStorage.removeItem('refreshToken');
+  localStorage.removeItem('user');
+};
+
+export const getStoredRefreshToken = (): string | null => {
+  return localStorage.getItem('refreshToken');
+};
+
+export const setStoredRefreshToken = (token: string): void => {
+  localStorage.setItem('refreshToken', token);
+};
+
+export const getStoredUser = (): any => {
+  const userStr = localStorage.getItem('user');
+  return userStr ? JSON.parse(userStr) : null;
+};
+
+export const setStoredUser = (user: any): void => {
+  localStorage.setItem('user', JSON.stringify(user));
 }; 

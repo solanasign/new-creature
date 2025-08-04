@@ -32,4 +32,4 @@ import open from './open.jpg'
 import praise from './praise.jpg'
 import contact from './contact.jpg'
 
-export { stairs,  logo, videoSrc, wealth, logowide, home, aboutChurch, aboutChurch2, outburst, worship, worship2, outreach, gideon, pastor, pastor2, pastor1, d4, mama, mama2, sax, victor, p2, women, word, inHim, inHimm, videoSrc1, joie, events, guitar, open, praise, contact };
+export { stairs, logo, videoSrc, wealth, logowide, home, aboutChurch, aboutChurch2, outburst, worship, worship2, outreach, gideon, pastor, pastor2, pastor1, d4, mama, mama2, sax, victor, p2, women, word, inHim, inHimm, videoSrc1, joie, events, guitar, open, praise, contact }; 

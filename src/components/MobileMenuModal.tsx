@@ -70,8 +70,8 @@ const MobileMenuModal: React.FC<MobileMenuModalProps> = ({ isOpen, onClose, curr
                     <Link
                       to="/"
                       className={`block text-2xl font-bold transition-colors ${isActiveLink('/')
-                          ? 'text-blue-400'
-                          : 'text-white hover:text-blue-500'
+                          ? 'text-yellow-400'
+                          : 'text-white hover:text-yellow-500'
                         }`}
                       onClick={onClose}
                     >
@@ -80,8 +80,8 @@ const MobileMenuModal: React.FC<MobileMenuModalProps> = ({ isOpen, onClose, curr
                     <Link
                       to="/new-here"
                       className={`block text-2xl font-bold transition-colors ${isActiveLink('/new-here')
-                          ? 'text-blue-400'
-                          : 'text-white hover:text-blue-500'
+                          ? 'text-yellow-400'
+                          : 'text-white hover:text-yellow-500'
                         }`}
                       onClick={onClose}
                     >
@@ -90,8 +90,8 @@ const MobileMenuModal: React.FC<MobileMenuModalProps> = ({ isOpen, onClose, curr
                     <Link
                       to="/about"
                       className={`block text-2xl font-bold transition-colors ${isActiveLink('/about')
-                          ? 'text-blue-400'
-                          : 'text-white hover:text-blue-500'
+                          ? 'text-yellow-400'
+                          : 'text-white hover:text-yellow-500'
                         }`}
                       onClick={onClose}
                     >
@@ -100,8 +100,8 @@ const MobileMenuModal: React.FC<MobileMenuModalProps> = ({ isOpen, onClose, curr
                     <Link
                       to="/sermons"
                       className={`block text-2xl font-bold transition-colors ${isActiveLink('/sermons')
-                          ? 'text-blue-400'
-                          : 'text-white hover:text-blue-500'
+                          ? 'text-yellow-400'
+                          : 'text-white hover:text-yellow-500'
                         }`}
                       onClick={onClose}
                     >
@@ -110,8 +110,8 @@ const MobileMenuModal: React.FC<MobileMenuModalProps> = ({ isOpen, onClose, curr
                     <Link
                       to="/events"
                       className={`block text-2xl font-bold transition-colors ${isActiveLink('/events')
-                          ? 'text-blue-400'
-                          : 'text-white hover:text-blue-500'
+                          ? 'text-yellow-400'
+                          : 'text-white hover:text-yellow-500'
                         }`}
                       onClick={onClose}
                     >
@@ -120,8 +120,8 @@ const MobileMenuModal: React.FC<MobileMenuModalProps> = ({ isOpen, onClose, curr
                     <Link
                       to="/contact"
                       className={`block text-2xl font-bold transition-colors ${isActiveLink('/contact')
-                          ? 'text-blue-400'
-                          : 'text-white hover:text-blue-500'
+                          ? 'text-yellow-400'
+                          : 'text-white hover:text-yellow-500'
                         }`}
                       onClick={onClose}
                     >

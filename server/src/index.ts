@@ -3,10 +3,9 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import authRoutes from './routes/auth';
-import contentRoutes from './routes/content';
-import messageRoutes from './routes/messageRoutes';
-import interactionRoutes from './routes/interactionRoutes';
-import userRoutes from './routes/userRoutes';
+import eventRoutes from './routes/events';
+import sermonRoutes from './routes/sermons';
+import prayerRoutes from './routes/prayerRequests';
 
 // Load environment variables
 dotenv.config();
@@ -25,19 +24,38 @@ mongoose
 
 // Routes
 app.use('/api/auth', authRoutes);
-app.use('/api/content', contentRoutes);
-app.use('/api/messages', messageRoutes);
-app.use('/api/interactions', interactionRoutes);
-app.use('/api/users', userRoutes);
+app.use('/api/events', eventRoutes);
+app.use('/api/sermons', sermonRoutes);
+app.use('/api/prayer-requests', prayerRoutes);
+
+// Health check endpoint
+app.get('/api/health', (req: Request, res: Response) => {
+  res.json({ 
+    status: 'OK', 
+    message: 'New Creature in Christ Church API is running',
+    timestamp: new Date().toISOString()
+  });
+});
 
 // Error handling middleware
 app.use((err: any, req: Request, res: Response, next: NextFunction) => {
   console.error(err.stack);
-  res.status(500).json({ error: 'Something went wrong!' });
+  res.status(500).json({ 
+    error: 'Something went wrong!',
+    code: 'INTERNAL_SERVER_ERROR'
+  });
+});
+
+// 404 handler
+app.use('*', (req: Request, res: Response) => {
+  res.status(404).json({ 
+    error: 'Endpoint not found',
+    code: 'NOT_FOUND'
+  });
 });
 
 // Start server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+  console.log(`New Creature in Christ Church API is running on port ${PORT}`);
 });

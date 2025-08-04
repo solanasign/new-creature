@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { PerformanceMonitor } from '../utils/performanceMonitor';
+// import { PerformanceMonitor } from '../utils/performanceMonitor';
 
 interface OptimizedImageProps {
   src: string;
@@ -71,7 +71,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
   const handleLoad = () => {
     const loadTime = performance.now() - loadStartTime.current;
-    PerformanceMonitor.trackImageLoad(src, loadTime);
+    // PerformanceMonitor.trackImageLoad(src, loadTime);
     setIsLoaded(true);
     onLoad?.();
   };

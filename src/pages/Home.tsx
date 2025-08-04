@@ -34,11 +34,12 @@ export default function Home() {
   ]);
 
   useEffect(() => {
-    function handleBannerEvent(e) {
-      setBannerActive(e.detail === true);
+    function handleBannerEvent(e: Event) {
+      const customEvent = e as CustomEvent<boolean>;
+      setBannerActive(customEvent.detail === true);
     }
-    window.addEventListener('maintenance-banner', handleBannerEvent);
-    return () => window.removeEventListener('maintenance-banner', handleBannerEvent);
+    window.addEventListener('maintenance-banner', handleBannerEvent as EventListener);
+    return () => window.removeEventListener('maintenance-banner', handleBannerEvent as EventListener);
   }, []);
 
   const handleAddEvent = (newEvent: EventCardData) => {
@@ -64,7 +65,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
             {/* Left: Text Content */}
             <div className="space-y-6 md:space-y-8 text-center lg:text-left">
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight">
                 Welcome to<br />
                 <span className="text-yellow-400">New Creature</span><br />
                 in Christ Church
@@ -76,7 +77,7 @@ export default function Home() {
                 <Link to="/new-here" className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-lg shadow-lg transition-all duration-200 hover:scale-105 text-center">
                   New Here?
                 </Link>
-                <Link to="/about" className="border-2 border-white hover:bg-white hover:text-black text-white font-bold px-8 py-4 rounded-lg transition-all duration-200 hover:scale-105 text-center">
+                <Link to="/about" className="border-2 border-white hover:bg-white hover:text-yellow-500 text-white font-bold px-8 py-4 rounded-lg transition-all duration-200 hover:scale-105 text-center">
                   Learn More
                 </Link>
               </div>
@@ -93,7 +94,7 @@ export default function Home() {
       {/* Mission Statement Section */}
       <section className="w-full bg-white pt-8 pb-0">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl md:text-5xl font-extrabold text-zinc-900 leading-tight mb-6">
+          <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-900 leading-tight mb-6">
             Love God.<br />
             Love People.<br />
             Change the World.
@@ -108,7 +109,7 @@ export default function Home() {
             <div className="w-full rounded-2xl overflow-hidden shadow-lg bg-black aspect-video flex items-center justify-center mx-auto">
               <video src={videoSrc1} autoPlay muted loop className="w-full h-full object-contain" />
             </div>
-            <Link to="/get-involved" className="mt-6 bg-zinc-700 hover:bg-zinc-800 text-white font-bold px-6 py-3 rounded shadow text-base transition-all duration-200 hover:scale-105">
+            <Link to="/get-involved" className="mt-6 bg-zinc-700 hover:bg-yellow-500 text-white font-bold px-6 py-3 rounded shadow text-base transition-all duration-200 hover:scale-105">
               Get Involved
             </Link>
           </div>
@@ -119,7 +120,7 @@ export default function Home() {
       <section className="w-full bg-white py-16 md:py-20">
         <div className="max-w-6xl mx-auto px-2 sm:px-4">
           <div className="text-left space-y-8">
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-black leading-tight text-center md:text-left">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-black leading-tight text-center md:text-left">
               Who We Are
             </h2>
             <p className="text-base md:text-xl text-black leading-relaxed max-w-2xl mx-auto md:mx-0 text-center md:text-left">
@@ -132,7 +133,7 @@ export default function Home() {
                   heading: 'Watchword for 2025',
                   content: (
                     <>
-                      <p className="text-lg md:text-xl text-gray-700 italic leading-relaxed">
+                      <p className="text-xl md:text-2xl text-gray-700 italic leading-relaxed">
                         "I will bless the Lord at all times, His praise shall continually be in my mouth"
                       </p>
                       <p className="text-sm text-gray-600 font-semibold mt-2">Psalm 34:1</p>
@@ -143,10 +144,9 @@ export default function Home() {
                   heading: 'Year 2025',
                   content: (
                     <>
-                      <p className="text-lg md:text-xl text-gray-700 italic leading-relaxed">
+                      <p className="text-xl md:text-2xl text-gray-700 italic leading-relaxed">
                         2025 is <span className="font-bold text-blue-700">"Our Year of Divine Turn Around."</span>
                       </p>
-                      <p className="text-sm text-gray-600 font-semibold mt-2">Psalm 34:1</p>
                     </>
                   ),
                 },
@@ -274,11 +274,11 @@ export default function Home() {
           <div className="text-center mt-12">
             <button
               onClick={() => setShowUploadForm(true)}
-              className="bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-3 rounded-lg shadow-lg transition-all duration-200 hover:scale-105 mr-4"
+              className="bg-yellow-600 hover:bg-yellow-700 text-white font-bold px-8 py-3 rounded-lg shadow-lg transition-all duration-200 hover:scale-105 mr-4"
             >
               Add Event
             </button>
-            <Link to="/events" className="border-2 border-blue-600 hover:bg-blue-600 hover:text-white text-blue-600 font-bold px-8 py-3 rounded-lg transition-all duration-200 hover:scale-105">
+            <Link to="/events" className="border-2 border-yellow-600 hover:bg-yellow-600 hover:text-white text-yellow-600 font-bold px-8 py-3 rounded-lg transition-all duration-200 hover:scale-105">
               View All Events
             </Link>
           </div>

@@ -1,7 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import { useEffect } from 'react';
 import { AuthProvider } from './features/auth/context/AuthContext';
-import { ProtectedRoute } from './features/auth/components/ProtectedRoute';
 import Home from './pages/Home';
 import VideoPlayer from './components/VideoPlayer';
 import NotFound from './pages/NotFound';
@@ -12,22 +11,12 @@ import Sermons from './pages/Sermons'
 import InHimSermon from './pages/InHimSermon'
 import Events from './pages/Events'
 import Contact from './pages/Contact'
-import { preloadCriticalImages } from './utils/imagePreloader';
-import { monitorWebVitals } from './utils/performanceMonitor';
+import Login from './pages/Login'
+import Register from './pages/Register'
 
 function App() {
   useEffect(() => {
-    // Initialize image preloading
-    preloadCriticalImages();
-    
-    // Initialize performance monitoring
-    monitorWebVitals();
-    
-    // Log performance report after 5 seconds
-    setTimeout(() => {
-      const { PerformanceMonitor } = require('./utils/performanceMonitor');
-      PerformanceMonitor.logPerformanceReport();
-    }, 5000);
+    // App initialization can go here
   }, []);
 
   return (
@@ -43,12 +32,11 @@ function App() {
         <Route path="/events" element={<Events />} />
         <Route path="/contact" element={<Contact />} />
         
-        <Route path="/video/:id" element={
-          <ProtectedRoute>
-            <VideoPlayer />
-          </ProtectedRoute>
-        } />
+        {/* Auth Routes */}
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
         
+        <Route path="/video/:id" element={<VideoPlayer />} />
         
         {/* Fallback Routes */}
         <Route path="*" element={<NotFound />} />

@@ -65,7 +65,7 @@ const AnimatedLogo: React.FC = () => {
                 to="/"
                 className={`transition-colors font-medium ${
                   isActiveLink('/') 
-                    ? 'text-blue-400 border-b-2 border-blue-400' 
+                    ? 'text-yellow-400 border-b-2 border-yellow-400' 
                     : 'text-white hover:text-gray-300'
                 }`}
               >
@@ -77,7 +77,7 @@ const AnimatedLogo: React.FC = () => {
                 to="/new-here"
                 className={`transition-colors font-medium ${
                   isActiveLink('/new-here') 
-                    ? 'text-blue-400 border-b-2 border-blue-400' 
+                    ? 'text-yellow-400 border-b-2 border-yellow-400' 
                     : 'text-white hover:text-gray-300'
                 }`}
               >
@@ -91,7 +91,7 @@ const AnimatedLogo: React.FC = () => {
                   to={link.href}
                   className={`transition-colors font-medium ${
                     isActiveLink(link.href) 
-                      ? 'text-blue-400 border-b-2 border-blue-400' 
+                      ? 'text-yellow-400 border-b-2 border-yellow-400' 
                       : 'text-white hover:text-gray-300'
                   }`}
                 >

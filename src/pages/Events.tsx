@@ -53,13 +53,13 @@ const Events: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                 <Link
                   to="/contact"
-                  className="px-8 py-4 bg-white hover:bg-gray-100 text-blue-900 font-semibold rounded-lg transition-all duration-200 text-lg hover:scale-105 shadow-lg"
+                  className="px-8 py-4 bg-white hover:bg-gray-100 text-black font-semibold rounded-lg transition-all duration-200 text-lg hover:scale-105 shadow-lg"
                 >
                   Get Involved
                 </Link>
                 <Link
                   to="/calendar"
-                  className="px-8 py-4 bg-transparent hover:bg-white hover:text-blue-900 text-white font-semibold rounded-lg border-2 border-white transition-all duration-200 text-lg hover:scale-105"
+                  className="px-8 py-4 bg-transparent hover:bg-white hover:text-yellow-500 text-white font-semibold rounded-lg border-2 border-white transition-all duration-200 text-lg hover:scale-105"
                 >
                   View Calendar
                 </Link>
@@ -105,7 +105,7 @@ const Events: React.FC = () => {
                 }, [carouselIndex]);
 
                 const variants = {
-                  enter: (dir) => ({
+                  enter: (dir: number) => ({
                     x: dir > 0 ? 300 : -300,
                     opacity: 0,
                   }),
@@ -113,7 +113,7 @@ const Events: React.FC = () => {
                     x: 0,
                     opacity: 1,
                   },
-                  exit: (dir) => ({
+                  exit: (dir: number) => ({
                     x: dir > 0 ? -300 : 300,
                     opacity: 0,
                   }),
@@ -269,7 +269,7 @@ const Events: React.FC = () => {
             </Link>
             <Link
               to="/new-here"
-              className="px-8 py-4 bg-transparent hover:bg-white hover:text-blue-900 text-white font-semibold rounded-lg border-2 border-white transition-all duration-200 text-lg hover:scale-105"
+              className="px-8 py-4 bg-transparent hover:bg-white hover:text-yellow-700 text-white font-semibold rounded-lg border-2 border-white transition-all duration-200 text-lg hover:scale-105"
             >
               New Here?
             </Link>

@@ -41,7 +41,25 @@ const NewHere: React.FC = () => {
     };
   }, [currentSlide]);
 
-  const BalloonImage = ({ className, gradient, img, alt, yRange = [0, -60], xRange = [0, 0], zIndex = 1, delay = 0 }) => {
+  const BalloonImage = ({ 
+    className, 
+    gradient, 
+    img, 
+    alt, 
+    yRange = [0, -60], 
+    xRange = [0, 0], 
+    zIndex = 1, 
+    delay = 0 
+  }: {
+    className: string;
+    gradient: string;
+    img: string;
+    alt: string;
+    yRange?: [number, number];
+    xRange?: [number, number];
+    zIndex?: number;
+    delay?: number;
+  }) => {
     const ref = useRef<HTMLDivElement>(null);
     const { scrollY } = useScroll();
     const y = useTransform(scrollY, [0, 800], yRange);
@@ -80,7 +98,7 @@ const NewHere: React.FC = () => {
         <div className="max-w-6xl mx-auto">
           {/* Text Content */}
           <div className="text-center mb-12 pt-8 md:mb-20 relative z-10">
-            <h1 className="block text-3xl md:text-6xl font-semibold text-black mb-4 md:mb-6 leading-tight">
+            <h1 className="block text-4xl md:text-6xl font-semibold text-black mb-4 md:mb-6 leading-tight">
               You're not just a visitor, you're family!
             </h1>
             <p className="text-base md:text-xl text-black max-w-3xl mx-auto leading-relaxed">
@@ -93,13 +111,13 @@ const NewHere: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 md:mb-20 relative z-10">
             <Link
               to="/events"
-              className="px-8 py-4 bg-teal-700 hover:bg-teal-800 text-white font-semibold rounded-lg transition-all duration-200 text-lg hover:scale-105 shadow-lg"
+              className="px-8 py-4 bg-yellow-700 hover:bg-yellow-800 text-white font-semibold rounded-lg transition-all duration-200 text-lg hover:scale-105 shadow-lg"
             >
               Explore Events
             </Link>
             <Link
               to="/about"
-              className="px-8 py-4 bg-gray-800 hover:bg-gray-900 text-white font-semibold rounded-lg transition-all duration-200 text-lg hover:scale-105 shadow-lg"
+              className="px-8 py-4 bg-yellow-800 hover:bg-yellow-900 text-white font-semibold rounded-lg transition-all duration-200 text-lg hover:scale-105 shadow-lg"
             >
               Who We Are
             </Link>
@@ -178,7 +196,7 @@ const NewHere: React.FC = () => {
                       transition={{ duration: 0.8, ease: "easeInOut" }}
                       className="absolute w-full"
                     >
-                  <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 md:mb-6">
+                  <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 md:mb-6">
                         {carouselSlides[currentSlide].title}
                       </h2>
                       <p className="text-base md:text-2xl leading-relaxed text-gray-200 max-w-lg mb-6 md:mb-8">
@@ -248,7 +266,7 @@ const NewHere: React.FC = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <h3 className="text-xl md:text-2xl font-bold text-black">
+                <h3 className="text-2xl md:text-4xl font-bold text-black">
                   Sunday Services
                 </h3>
               </div>
@@ -272,7 +290,7 @@ const NewHere: React.FC = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                   </svg>
                 </div>
-                <h3 className="text-xl md:text-2xl font-bold text-black">
+                <h3 className="text-2xl md:text-4xl font-bold text-black">
                   Mid-week Services
                 </h3>
               </div>
@@ -297,7 +315,7 @@ const NewHere: React.FC = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
                 </div>
-                <h3 className="text-xl md:text-2xl font-bold text-black">
+                <h3 className="text-2xl md:text-4xl font-bold text-black">
                   Join Us
                 </h3>
               </div>

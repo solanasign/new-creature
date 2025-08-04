@@ -1,4 +1,3 @@
-import React from 'react';
 import { aboutChurch, aboutChurch2 } from '../assets/images'
 import { ObjectivesAccordion } from '../components/ObjectivesAccordion';
 import TakeNextStepSection from '../components/TakeNextStepSection';
