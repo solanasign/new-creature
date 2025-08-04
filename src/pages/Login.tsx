@@ -56,7 +56,7 @@ const Login: React.FC = () => {
               transition={{ delay: 0.2 }}
               className="text-3xl font-bold text-gray-900 mb-2"
             >
-              Welcome Back
+              Welcome Back!
             </motion.h1>
             <motion.p
               initial={{ opacity: 0 }}
@@ -64,7 +64,7 @@ const Login: React.FC = () => {
               transition={{ delay: 0.3 }}
               className="text-gray-600"
             >
-              Sign in to your New Creature in Christ Church account
+              Sign in to your account
             </motion.p>
           </div>
 
@@ -86,7 +86,7 @@ const Login: React.FC = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.4 }}
             >
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="email" className="block text-sm font-medium text-gray-800 mb-2">
                 Email Address
               </label>
               <input
@@ -96,7 +96,7 @@ const Login: React.FC = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition duration-200"
+                className="w-full px-4 py-3 border border-indigo-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition duration-200"
                 placeholder="Enter your email"
               />
             </motion.div>
@@ -116,7 +116,7 @@ const Login: React.FC = () => {
                 value={formData.password}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition duration-200"
+                className="w-full px-4 py-3 border border-indigo-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition duration-200"
                 placeholder="Enter your password"
               />
             </motion.div>
@@ -127,7 +127,7 @@ const Login: React.FC = () => {
               transition={{ delay: 0.6 }}
               type="submit"
               disabled={isSubmitting}
-              className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-3 px-4 rounded-lg font-medium hover:from-indigo-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full bg-gradient-to-r from-green-600 to-yellow-600 text-white py-3 px-4 rounded-lg font-medium hover:from-green-700 hover:to-yellow-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isSubmitting ? (
                 <div className="flex items-center justify-center">
@@ -151,7 +151,7 @@ const Login: React.FC = () => {
               Don't have an account?{' '}
               <Link
                 to="/register"
-                className="text-indigo-600 hover:text-indigo-500 font-medium transition duration-200"
+                className="hover:underline text-yellow-600 hover:text-yellow-500 font-medium transition duration-200"
               >
                 Sign up here
               </Link>

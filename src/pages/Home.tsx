@@ -8,10 +8,12 @@ import TakeNextStepSection from '../components/TakeNextStepSection';
 import Footer from "../components/Footer";
 import OptimizedImage from '../components/OptimizedImage';
 import { RESPONSIVE_SIZES } from '../config/imageConfig';
+import { useAuth } from '../features/auth/context/AuthContext';
 
 export default function Home() {
   const [bannerActive, setBannerActive] = useState(false);
   const [showUploadForm, setShowUploadForm] = useState(false);
+  const { user } = useAuth();
   const [events, setEvents] = useState<EventCardData[]>([
     {
       date: '2025-08-03',
@@ -272,12 +274,14 @@ export default function Home() {
             ))}
           </div>
           <div className="text-center mt-12">
-            <button
-              onClick={() => setShowUploadForm(true)}
-              className="bg-yellow-600 hover:bg-yellow-700 text-white font-bold px-8 py-3 rounded-lg shadow-lg transition-all duration-200 hover:scale-105 mr-4"
-            >
-              Add Event
-            </button>
+            {user?.role === 'admin' || user?.role === 'pastor' ? (
+              <button
+                onClick={() => setShowUploadForm(true)}
+                className="bg-yellow-600 hover:bg-yellow-700 text-white font-bold px-8 py-3 rounded-lg shadow-lg transition-all duration-200 hover:scale-105 mr-4"
+              >
+                Add Event
+              </button>
+            ) : null}
             <Link to="/events" className="border-2 border-yellow-600 hover:bg-yellow-600 hover:text-white text-yellow-600 font-bold px-8 py-3 rounded-lg transition-all duration-200 hover:scale-105">
               View All Events
             </Link>
