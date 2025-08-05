@@ -153,7 +153,7 @@ const Login: React.FC = () => {
                 to="/register"
                 className="hover:underline text-yellow-600 hover:text-yellow-500 font-medium transition duration-200"
               >
-                Sign up here
+                Register
               </Link>
             </p>
           </motion.div>

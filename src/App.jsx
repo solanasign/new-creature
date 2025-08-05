@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import VideoPlayer from './components/VideoPlayer';
 import NotFound from './pages/NotFound';
 import AnimatedLogo from './components/AnimatedLogo';
+import ScrollToTop from './components/ScrollToTop';
 import About from './pages/About'
 import NewHere from './pages/NewHere'
 import Sermons from './pages/Sermons'
@@ -21,6 +22,7 @@ function App() {
 
   return (
     <AuthProvider>
+      <ScrollToTop />
       <AnimatedLogo />
       <Routes>
         <Route path="/" element={<Home />} />

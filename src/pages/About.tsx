@@ -40,7 +40,7 @@ const About = () => {
         <div className="max-w-6xl mx-auto px-2 sm:px-4 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Left: Image */}
           <div className="flex justify-center md:justify-start order-2 md:order-1">
-            <div className="w-full max-w-xs sm:max-w-md aspect-[4/5] rounded-2xl shadow-xl overflow-hidden">
+            <div className="w-full max-w-xs sm:max-w-md aspect-[5/4] rounded-2xl shadow-xl overflow-hidden">
               <OptimizedImage
                 src={aboutChurch2}
                 alt="About New Creature in Christ Church"

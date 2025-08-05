@@ -53,7 +53,7 @@ export const ObjectivesAccordion: React.FC = () => {
             transition={{ duration: 0.5, delay: idx * 0.1 }}
           >
             <button
-              className="w-full flex items-center justify-between px-4 sm:px-6 md:px-8 py-4 md:py-6 font-extrabold text-base sm:text-lg md:text-xl text-left focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-[#393939] rounded-t-2xl transition-colors duration-200 hover:bg-[#4a4a4a]"
+              className="w-full flex items-center justify-between px-4 sm:px-6 md:px-8 py-4 md:py-6 font-extrabold text-base sm:text-lg md:text-xl text-left focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 focus:ring-offset-[#393939] rounded-t-2xl transition-colors duration-200 hover:bg-[#4a4a4a]"
               onClick={() => toggle(idx)}
               aria-expanded={isOpen}
               aria-controls={`accordion-content-${idx}`}
