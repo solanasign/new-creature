@@ -1,15 +1,33 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "version": 2,
   "builds": [
     {
-      "src": "*.js","*.jsx","*.ts","*.tsx"
+      "src": "*.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "*.jsx",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "*.ts",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "*.tsx",
       "use": "@vercel/node"
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/(.*)",
-      "dest": "/"
+      "source": "/api/(.*)",
+      "destination": "/$1"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.js"
     }
-  ]
+  ],
+  "cleanUrls": true
 }
