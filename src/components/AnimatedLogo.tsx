@@ -33,6 +33,7 @@ const AnimatedLogo: React.FC = () => {
     { name: 'Sermons', href: '/sermons' },
     { name: 'Events', href: '/events' },
     { name: 'Contact Us', href: '/contact' },
+    { name: 'Register', href: '/register' },
   ];
 
   // Helper function to check if a link is active
