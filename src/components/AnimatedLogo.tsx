@@ -103,7 +103,7 @@ const AnimatedLogo: React.FC = () => {
             {/* Mobile Menu Button */}
             <div className="flex items-center min-w-[60px] justify-end">
               <button 
-                className="text-white hover:text-zinc-300 focus:outline-none"
+                className="bg-yellow-600 text-white hover:text-zinc-300 focus:outline-none"
                 onClick={() => setIsMenuOpen(true)}
               >
                 <svg width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
